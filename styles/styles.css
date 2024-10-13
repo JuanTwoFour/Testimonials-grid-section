@@ -117,16 +117,34 @@ h3 {
 
 .testimonial-grid {
   display: grid;
-  gap: 1.5rem;  
-  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
 
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
 
-.grid-col-span-2 {
-  grid-column: span 2;
+.testimonial:nth-child(1) {
+  grid-area: one ;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
 }
 
 .testimonial {
